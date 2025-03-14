@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IdeaVisor AI Generator - Create design inspiration images with artificial intelligence">
+    <meta name="keywords" content="AI image generator,design inspiration,IdeaVisor AI,design visualization">
+    <title>IdeaVisor AI Generator - Create Design Inspiration</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Open Graph tags for social sharing -->
+    <meta property="og:title" content="IdeaVisor AI Generator">
+    <meta property="og:description" content="Generate design inspiration images with AI for your web projects.">
+    <meta property="og:image" content="img/ideavisor-social.svg">
+    <meta property="og:url" content="https://ideavisor.design/ai-generator">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <style>
+        .ai-generator-hero {
+            padding: 6rem 0 4rem;
+            background-color: var(--background);
+        }
+        
+        .ai-generator-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .ai-generator-hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .ai-generator-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 0;
+        }
+        
+        .generator-interface {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+        }
+        
+        .prompt-section {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .prompt-section h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .prompt-input {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .prompt-input textarea {
+            min-height: 120px;
+            padding: 1rem;
+            border: 1px solid var(--light-gray);
+            border-radius: var(--radius);
+            font-family: var(--font-body);
+            resize: vertical;
+        }
+        
+        .prompt-input textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
+        }
+        
+        .options-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .option-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .option-item label {
+            font-weight: 500;
+            min-width: 120px;
+        }
+        
+        .option-item select,
+        .option-item input {
+            flex: 1;
+            padding: 0.5rem;
+            border: 1px solid var(--light-gray);
+            border-radius: var(--radius);
+        }
+        
+        .option-item select:focus,
+        .option-item input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .generate-btn {
+            margin-top: 1rem;
+        }
+        
+        .result-section {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .result-section h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .result-display {
+            background-color: var(--lighter-gray);
+            border-radius: var(--radius);
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        
+        .result-display img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: var(--radius);
+        }
+        
+        .loading-indicator {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(67, 97, 238, 0.2);
+            border-radius: 50%;
+            border-top-color: var(--primary);
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .result-actions {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .gallery-section {
+            margin-top: 3rem;
+        }
+        
+        .gallery-section h2 {
+            margin-bottom: 2rem;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .gallery-item {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .gallery-image {
+            height: 200px;
+            overflow: hidden;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .gallery-info {
+            padding: 1rem;
+        }
+        
+        .gallery-prompt {
+            font-size: 0.875rem;
+            color: var(--text-medium);
+            margin-bottom: 0.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .gallery-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+        
+        @media (max-width: 992px) {
+            .generator-interface {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .ai-generator-hero h1 {
+                font-size: 2.25rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .option-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+            }
+            
+            .option-item label {
+                min-width: auto;
+            }
+            
+            .option-item select,
+            .option-item input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <svg width="180" height="40" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.5 8L42 32H5L23.5 8Z" fill="#4361EE"/>
+                            <path d="M23.5 20L32 32H15L23.5 20Z" fill="#3A0CA3" fill-opacity="0.7"/>
+                            <text x="50" y="25" font-family="Arial, sans-serif" font-weight="bold" font-size="20" fill="#333">IdeaVisor</text>
+                        </svg>
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html#features" data-i18n="nav.features">Features</a>
+                    <a href="index.html#demo" data-i18n="nav.demo">Demo</a>
+                    <a href="index.html#gallery" data-i18n="nav.gallery">Gallery</a>
+                    <a href="index.html#comparison" data-i18n="nav.comparison">Comparison</a>
+                    <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+                </div>
+                <div class="nav-buttons">
+                    <button class="btn btn-secondary" data-i18n="nav.login">Login</button>
+                    <button class="btn btn-primary" data-i18n="nav.register">Sign Up</button>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <svg width="180" height="40" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.5 8L42 32H5L23.5 8Z" fill="#4361EE"/>
+                    <path d="M23.5 20L32 32H15L23.5 20Z" fill="#3A0CA3" fill-opacity="0.7"/>
+                    <text x="50" y="25" font-family="Arial, sans-serif" font-weight="bold" font-size="20" fill="#333">IdeaVisor</text>
+                </svg>
+            </div>
+            <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="mobile-menu-links">
+            <a href="index.html#features" data-i18n="nav.features">Features</a>
+            <a href="index.html#demo" data-i18n="nav.demo">Demo</a>
+            <a href="index.html#gallery" data-i18n="nav.gallery">Gallery</a>
+            <a href="index.html#comparison" data-i18n="nav.comparison">Comparison</a>
+            <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+            <button class="btn btn-secondary mobile-btn" data-i18n="nav.login">Login</button>
+            <button class="btn btn-primary mobile-btn" data-i18n="nav.register">Sign Up</button>
+        </div>
+    </div>
+
+    <!-- AI Generator Hero Section -->
+    <section class="ai-generator-hero">
+        <div class="container" style="text-align: center;">
+            <h1 data-i18n="ai_generator.hero.title">AI-Powered Design Inspiration</h1>
+            <p data-i18n="ai_generator.hero.subtitle">Generate unique visuals to inspire your website design using our advanced AI image generator. Describe your vision, and let IdeaVisor's AI bring it to life.</p>
+        </div>
+    </section>
+
+    <!-- AI Generator Section -->
+    <section class="ai-generator-container">
+        <div class="generator-interface">
+            <div class="prompt-section">
+                <h3 data-i18n="ai_generator.form.describe_title">Describe Your Vision</h3>
+                <div class="prompt-input">
+                    <label for="prompt-text" data-i18n="ai_generator.form.description_label">Enter a detailed description of the image you want to generate:</label>
+                    <textarea id="prompt-text" data-i18n-placeholder="ai_generator.form.description_placeholder" placeholder="E.g., A modern minimalist website homepage for a tech startup with blue and white color scheme, featuring abstract geometric shapes and clean typography."></textarea>
+                </div>
+                <div class="options-section">
+                    <div class="option-item">
+                        <label for="style-select" data-i18n="ai_generator.form.style_label">Style:</label>
+                        <select id="style-select">
+                            <option value="realistic" data-i18n="ai_generator.form.style_realistic">Realistic</option>
+                            <option value="abstract" selected data-i18n="ai_generator.form.style_abstract">Abstract</option>
+                            <option value="minimalist" data-i18n="ai_generator.form.style_minimalist">Minimalist</option>
+                            <option value="futuristic" data-i18n="ai_generator.form.style_futuristic">Futuristic</option>
+                            <option value="retro" data-i18n="ai_generator.form.style_retro">Retro</option>
+                        </select>
+                    </div>
+                    <div class="option-item">
+                        <label for="aspect-ratio" data-i18n="ai_generator.form.aspect_ratio_label">Aspect Ratio:</label>
+                        <select id="aspect-ratio">
+                            <option value="1:1" data-i18n="ai_generator.form.ratio_square">1:1 (Square)</option>
+                            <option value="16:9" selected data-i18n="ai_generator.form.ratio_landscape">16:9 (Landscape)</option>
+                            <option value="9:16" data-i18n="ai_generator.form.ratio_portrait">9:16 (Portrait)</option>
+                            <option value="4:3" data-i18n="ai_generator.form.ratio_standard">4:3 (Standard)</option>
+                            <option value="21:9" data-i18n="ai_generator.form.ratio_ultrawide">21:9 (Ultrawide)</option>
+                        </select>
+                    </div>
+                    <div class="option-item">
+                        <label for="seed-input" data-i18n="ai_generator.form.seed_label">Seed (Optional):</label>
+                        <input type="number" id="seed-input" data-i18n-placeholder="ai_generator.form.seed_placeholder" placeholder="Random seed for reproducibility">
+                    </div>
+                </div>
+                <button id="generate-btn" class="btn btn-primary generate-btn" data-i18n="ai_generator.form.generate_button">Generate Image</button>
+            </div>
+            <div class="result-section">
+                <h3 data-i18n="ai_generator.result.title">Generated Result</h3>
+                <div class="result-display" id="result-display">
+                    <div class="loading-indicator" id="loading-indicator">
+                        <div class="spinner"></div>
+                        <p data-i18n="ai_generator.result.loading">Generating your design inspiration...</p>
+                    </div>
+                    <img id="result-image" style="display: none;">
+                    <div id="empty-state">
+                        <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="120" height="120" rx="8" fill="#F1F3F5"/>
+                            <path d="M40 60L80 60M60 40L60 80" stroke="#CED4DA" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                        <p data-i18n="ai_generator.result.empty_state">Your generated image will appear here</p>
+                    </div>
+                </div>
+                <div class="result-actions">
+                    <button id="download-btn" class="btn btn-secondary" disabled data-i18n="ai_generator.result.download_button">Download</button>
+                    <button id="save-btn" class="btn btn-secondary" disabled data-i18n="ai_generator.result.save_button">Save to Gallery</button>
+                    <button id="share-btn" class="btn btn-secondary" disabled data-i18n="ai_generator.result.share_button">Share</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="gallery-section">
+            <h2 data-i18n="ai_generator.gallery.title">Community Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Modern website design">
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-prompt" data-i18n="ai_generator.gallery.item1_prompt">Modern website design with gradient background and floating elements</div>
+                        <div class="gallery-meta">
+                            <span data-i18n="ai_generator.gallery.item1_author">By: johndoe</span>
+                            <span data-i18n="ai_generator.gallery.item1_time">2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="E-commerce grid layout">
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-prompt" data-i18n="ai_generator.gallery.item2_prompt">E-commerce grid layout with product cards and minimal navigation</div>
+                        <div class="gallery-meta">
+                            <span data-i18n="ai_generator.gallery.item2_author">By: designpro</span>
+                            <span data-i18n="ai_generator.gallery.item2_time">4 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Dark mode dashboard">
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-prompt" data-i18n="ai_generator.gallery.item3_prompt">Dark mode dashboard with neon accents and data visualization</div>
+                        <div class="gallery-meta">
+                            <span data-i18n="ai_generator.gallery.item3_author">By: uimaster</span>
+                            <span data-i18n="ai_generator.gallery.item3_time">1 week ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Blog layout design">
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-prompt" data-i18n="ai_generator.gallery.item4_prompt">Minimalist blog layout with large typography and whitespace</div>
+                        <div class="gallery-meta">
+                            <span data-i18n="ai_generator.gallery.item4_author">By: creative92</span>
+                            <span data-i18n="ai_generator.gallery.item4_time">1 week ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="App landing page">
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-prompt" data-i18n="ai_generator.gallery.item5_prompt">App landing page with device mockups and feature highlights</div>
+                        <div class="gallery-meta">
+                            <span data-i18n="ai_generator.gallery.item5_author">By: appdevguru</span>
+                            <span data-i18n="ai_generator.gallery.item5_time">2 weeks ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Portfolio layout">
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-prompt" data-i18n="ai_generator.gallery.item6_prompt">Creative portfolio layout with masonry grid and subtle animations</div>
+                        <div class="gallery-meta">
+                            <span data-i18n="ai_generator.gallery.item6_author">By: designerx</span>
+                            <span data-i18n="ai_generator.gallery.item6_time">2 weeks ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-i18n="ai_generator.cta.title">Ready to Create Your Website Design?</h2>
+                <p data-i18n="ai_generator.cta.subtitle">Use these AI-generated design inspirations as a starting point for your next project with IdeaVisor</p>
+                <div class="cta-form">
+                    <input type="email" data-i18n-placeholder="cta.email_placeholder" placeholder="Enter your email address">
+                    <button class="btn btn-primary btn-lg" data-i18n="cta.start_btn">Get Started</button>
+                </div>
+                <p class="cta-note" data-i18n="cta.note">No credit card required. Try before you pay.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.5 8L42 32H5L23.5 8Z" fill="#4361EE"/>
+                            <path d="M23.5 20L32 32H15L23.5 20Z" fill="#3A0CA3" fill-opacity="0.7"/>
+                            <text x="50" y="25" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#fff">IdeaVisor</text>
+                        </svg>
+                    </div>
+                    <p class="footer-description" data-i18n="footer.description">IdeaVisor helps entrepreneurs easily build website design prototypes, quickly showcase design concepts, and accelerate digital product development.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 data-i18n="footer.product">Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#features" data-i18n="footer.features">Features</a></li>
+                        <li><a href="index.html#demo" data-i18n="footer.demo">Demo</a></li>
+                        <li><a href="pricing.html" data-i18n="footer.pricing">Pricing</a></li>
+                        <li><a href="ai-generator.html" data-i18n="footer.ai_generator">AI Generator</a></li>
+                        <li><a href="#" data-i18n="footer.roadmap">Roadmap</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 data-i18n="footer.resources">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" data-i18n="footer.blog">Blog</a></li>
+                        <li><a href="#" data-i18n="footer.tutorials">Tutorials</a></li>
+                        <li><a href="index.html#gallery" data-i18n="footer.examples">Examples</a></li>
+                        <li><a href="#" data-i18n="footer.documentation">Documentation</a></li>
+                        <li><a href="#" data-i18n="footer.api">API</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 data-i18n="footer.company">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-i18n="footer.about">About</a></li>
+                        <li><a href="#" data-i18n="footer.careers">Careers</a></li>
+                        <li><a href="contact.html" data-i18n="footer.contact">Contact</a></li>
+                        <li><a href="#" data-i18n="footer.press">Press</a></li>
+                        <li><a href="#" data-i18n="footer.partners">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 data-i18n="footer.legal">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" data-i18n="footer.terms">Terms</a></li>
+                        <li><a href="#" data-i18n="footer.privacy">Privacy</a></li>
+                        <li><a href="#" data-i18n="footer.cookies">Cookies</a></li>
+                        <li><a href="#" data-i18n="footer.security">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p data-i18n="footer.copyright">&copy; 2023 IdeaVisor. All rights reserved.</p>
+                </div>
+                <div class="language-selector">
+                    <label for="language-select" data-i18n="footer.language">Language:</label>
+                    <select id="language-select">
+                        <option value="en-US">English</option>
+                        <option value="zh-CN">简体中文</option>
+                        <option value="ja-JP">日本語</option>
+                        <option value="ko-KR">한국어</option>
+                        <option value="fr-FR">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/ai-generator.js"></script>
+</body>
+</html>

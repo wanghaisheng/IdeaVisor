@@ -1,0 +1,168 @@
+{
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "demo": "Demo",
+    "gallery": "Gallery",
+    "comparison": "Comparison",
+    "pricing": "Pricing",
+    "login": "Login",
+    "register": "Sign Up"
+  },
+  "hero": {
+    "title": "Input a URL, Create Your Website Design Blueprint",
+    "subtitle": "IdeaVisor helps entrepreneurs quickly capture design inspiration. Just provide a reference website and instantly get a customizable website framework and visual style.",
+    "cta_primary": "Try It Now",
+    "cta_secondary": "Learn More",
+    "stat1": "Happy Users",
+    "stat2": "Blueprints Generated",
+    "stat3": "User Rating"
+  },
+  "trust": {
+    "title": "Trusted By Industry Leaders"
+  },
+  "features": {
+    "title": "How VisionFlow Enhances Your Design Process",
+    "subtitle": "Transform vague ideas into clear design blueprints, saving valuable time and resources",
+    "feature1_title": "Intelligent Style Extraction",
+    "feature1_desc": "Automatically analyze and extract color schemes, typography rules, layout structures, and UI component styles from target websites.",
+    "feature2_title": "Downloadable Design Assets",
+    "feature2_desc": "Get complete HTML, CSS, and JavaScript file packages, including responsive page templates and components, ready for your project development.",
+    "feature3_title": "Intuitive Content Editor",
+    "feature3_desc": "Use our visual editing environment to directly modify text, replace images, and adjust colors without coding knowledge.",
+    "feature4_title": "Component Library & Modules",
+    "feature4_desc": "Access UI elements and content modules inspired by target websites. Build custom pages with drag-and-drop while maintaining visual consistency.",
+    "feature5_title": "Real-time Preview & Sharing",
+    "feature5_desc": "Instantly view your design changes and generate shareable links for collaboration with team members or clients.",
+    "feature6_title": "No-Registration Demo Area",
+    "feature6_desc": "Try core features without registration, quickly experience VisionFlow's capabilities, and create an account later for more privileges."
+  },
+  "workflow": {
+    "title": "From Concept to Blueprint in Three Steps",
+    "subtitle": "A simple, intuitive process that lets you focus on creativity rather than technical details",
+    "step1_title": "Input Reference URL",
+    "step1_desc": "Provide a link to a website you like, and VisionFlow will begin analyzing its visual style and structural characteristics.",
+    "step2_title": "Wait for Smart Analysis",
+    "step2_desc": "Our system quickly extracts color schemes, font styles, page structures, and component designs, usually in just seconds.",
+    "step3_title": "Customize and Download",
+    "step3_desc": "Adjust the generated design blueprint to suit your needs, add your content, and download the complete website file package."
+  },
+  "playground": {
+    "title": "Experience VisionFlow Now",
+    "subtitle": "No registration needed - input a URL and instantly feel the design"
+  },
+  "comparison": {
+    "title": "IdeaVisor vs. Other Design Tools",
+    "subtitle": "Learn how IdeaVisor brings more value to your design process"
+  },
+  "pain_points": {
+    "title": "Solving Common Design Process Pain Points",
+    "subtitle": "We understand the challenges entrepreneurs face in the website design process, and IdeaVisor provides effective solutions",
+    "pain1_title": "Lack of Design Skills",
+    "pain1_desc": "Most entrepreneurs lack professional design skills and cannot effectively communicate their website vision, making design communication difficult.",
+    "pain2_title": "Time and Resource Constraints",
+    "pain2_desc": "In the early stages of a startup, time and money are tight, making it impossible to afford expensive design services or invest a lot of time in learning design skills.",
+    "pain3_title": "Communication and Feedback Barriers",
+    "pain3_desc": "Entrepreneurs struggle to accurately convey their design expectations to designers or development teams, leading to frequent revisions and increased communication costs.",
+    "pain4_title": "Lack of Design Inspiration",
+    "pain4_desc": "In the early stages of a project, entrepreneurs often find it difficult to determine the ideal design direction and lack effective sources of inspiration and reference standards.",
+    "solution": "IdeaVisor Solution:",
+    "solution1": "By extracting design styles from existing websites, non-designers can create professional-quality design prototypes without having to learn complex design tools.",
+    "solution2": "Generate website design prototypes in seconds, greatly shortening the design process and allowing you to invest your valuable time and resources in core business development.",
+    "solution3": "Provide visual design prototypes and sharing capabilities that allow you to clearly showcase design directions and facilitate team understanding and efficient communication.",
+    "solution4": "By analyzing and extracting design elements from existing websites and providing a rich case gallery, we help you discover and determine the most suitable design style.",
+    "cta": "Solve Your Design Challenges Now"
+  },
+  "ai_generator": {
+    "hero": {
+      "title": "AI-Powered Design Inspiration",
+      "subtitle": "Generate unique visuals to inspire your website design using our advanced AI image generator. Describe your vision, and let IdeaVisor's AI bring it to life."
+    },
+    "form": {
+      "describe_title": "Describe Your Vision",
+      "description_label": "Enter a detailed description of the image you want to generate:",
+      "description_placeholder": "E.g., A modern minimalist website homepage for a tech startup with blue and white color scheme, featuring abstract geometric shapes and clean typography.",
+      "style_label": "Style:",
+      "style_realistic": "Realistic",
+      "style_abstract": "Abstract",
+      "style_minimalist": "Minimalist",
+      "style_futuristic": "Futuristic",
+      "style_retro": "Retro",
+      "aspect_ratio_label": "Aspect Ratio:",
+      "ratio_square": "1:1 (Square)",
+      "ratio_landscape": "16:9 (Landscape)",
+      "ratio_portrait": "9:16 (Portrait)",
+      "ratio_standard": "4:3 (Standard)",
+      "ratio_ultrawide": "21:9 (Ultrawide)",
+      "seed_label": "Seed (Optional):",
+      "seed_placeholder": "Random seed for reproducibility",
+      "generate_button": "Generate Image"
+    },
+    "result": {
+      "title": "Generated Result",
+      "loading": "Generating your design inspiration...",
+      "empty_state": "Your generated image will appear here",
+      "download_button": "Download",
+      "save_button": "Save to Gallery",
+      "share_button": "Share"
+    },
+    "gallery": {
+      "title": "Community Gallery",
+      "item1_prompt": "Modern website design with gradient background and floating elements",
+      "item1_author": "By: johndoe",
+      "item1_time": "2 days ago",
+      "item2_prompt": "E-commerce grid layout with product cards and minimal navigation",
+      "item2_author": "By: designpro",
+      "item2_time": "4 days ago",
+      "item3_prompt": "Dark mode dashboard with neon accents and data visualization",
+      "item3_author": "By: uimaster",
+      "item3_time": "1 week ago",
+      "item4_prompt": "Minimalist blog layout with large typography and whitespace",
+      "item4_author": "By: creative92",
+      "item4_time": "1 week ago",
+      "item5_prompt": "App landing page with device mockups and feature highlights",
+      "item5_author": "By: appdevguru",
+      "item5_time": "2 weeks ago",
+      "item6_prompt": "Creative portfolio layout with masonry grid and subtle animations",
+      "item6_author": "By: designerx",
+      "item6_time": "2 weeks ago"
+    },
+    "cta": {
+      "title": "Ready to Create Your Website Design?",
+      "subtitle": "Use these AI-generated design inspirations as a starting point for your next project with IdeaVisor"
+    }
+  },
+  "footer": {
+    "description": "IdeaVisor helps entrepreneurs easily build website design prototypes, quickly showcase design concepts, and accelerate digital product development.",
+    "copyright": " 2023 IdeaVisor. All rights reserved.",
+    "language": "Language:",
+    "product": "Product",
+    "features": "Features",
+    "demo": "Demo",
+    "pricing": "Pricing",
+    "ai_generator": "AI Generator",
+    "roadmap": "Roadmap",
+    "resources": "Resources",
+    "blog": "Blog",
+    "tutorials": "Tutorials",
+    "examples": "Examples",
+    "documentation": "Documentation",
+    "api": "API",
+    "company": "Company",
+    "about": "About",
+    "careers": "Careers",
+    "contact": "Contact",
+    "press": "Press",
+    "partners": "Partners",
+    "legal": "Legal",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "cookies": "Cookies",
+    "security": "Security"
+  },
+  "cta": {
+    "email_placeholder": "Enter your email address",
+    "start_btn": "Get Started",
+    "note": "No credit card required. Try before you pay."
+  }
+}

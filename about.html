@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About IdeaVisor - Our mission, vision and the team behind the innovative website design blueprint tool">
+    <meta name="keywords" content="IdeaVisor,about us,design blueprint tool,website design mission,design vision">
+    <title>About IdeaVisor - Our Mission and Vision</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Open Graph tags for social sharing -->
+    <meta property="og:title" content="About IdeaVisor">
+    <meta property="og:description" content="Learn about our mission to make website design accessible to entrepreneurs and non-designers.">
+    <meta property="og:image" content="img/ideavisor-social.svg">
+    <meta property="og:url" content="https://ideavisor.design/about">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <style>
+        /* Additional styles for about page */
+        .about-hero {
+            padding: 6rem 0 4rem;
+            background-color: var(--background);
+        }
+        
+        .about-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .mission-vision {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+        
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .mission-card, .vision-card {
+            padding: 3rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .mission-card {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        .vision-card {
+            background-color: var(--lighter-gray);
+        }
+        
+        .mission-card h2, .vision-card h2 {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        
+        .mission-card h2 {
+            color: var(--white);
+        }
+        
+        .team-section {
+            padding: 5rem 0;
+            background-color: var(--background);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .team-member {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .member-photo {
+            height: 250px;
+            overflow: hidden;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .member-info {
+            padding: 1.5rem;
+        }
+        
+        .member-info h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .member-position {
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        @media (max-width: 992px) {
+            .mission-vision-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-hero h1 {
+                font-size: 2.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <svg width="180" height="40" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.5 8L42 32H5L23.5 8Z" fill="#4361EE"/>
+                            <path d="M23.5 20L32 32H15L23.5 20Z" fill="#3A0CA3" fill-opacity="0.7"/>
+                            <text x="50" y="25" font-family="Arial, sans-serif" font-weight="bold" font-size="20" fill="#333">IdeaVisor</text>
+                        </svg>
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html#features" data-i18n="nav.features">Features</a>
+                    <a href="index.html#demo" data-i18n="nav.demo">Demo</a>
+                    <a href="index.html#gallery" data-i18n="nav.gallery">Gallery</a>
+                    <a href="index.html#comparison" data-i18n="nav.comparison">Comparison</a>
+                    <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+                </div>
+                <div class="nav-buttons">
+                    <button class="btn btn-secondary" data-i18n="nav.login">Login</button>
+                    <button class="btn btn-primary" data-i18n="nav.register">Sign Up</button>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <svg width="180" height="40" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.5 8L42 32H5L23.5 8Z" fill="#4361EE"/>
+                    <path d="M23.5 20L32 32H15L23.5 20Z" fill="#3A0CA3" fill-opacity="0.7"/>
+                    <text x="50" y="25" font-family="Arial, sans-serif" font-weight="bold" font-size="20" fill="#333">IdeaVisor</text>
+                </svg>
+            </div>
+            <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="mobile-menu-links">
+            <a href="index.html#features" data-i18n="nav.features">Features</a>
+            <a href="index.html#demo" data-i18n="nav.demo">Demo</a>
+            <a href="index.html#gallery" data-i18n="nav.gallery">Gallery</a>
+            <a href="index.html#comparison" data-i18n="nav.comparison">Comparison</a>
+            <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+            <button class="btn btn-secondary mobile-btn" data-i18n="nav.login">Login</button>
+            <button class="btn btn-primary mobile-btn" data-i18n="nav.register">Sign Up</button>
+        </div>
+    </div>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container" style="text-align: center;">
+            <h1>About IdeaVisor</h1>
+            <p>We're on a mission to make website design accessible to everyone, regardless of technical skills or design experience. IdeaVisor empowers entrepreneurs and creators to quickly transform their ideas into professional designs.</p>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="mission-vision-grid">
+                <div class="mission-card">
+                    <h2>Our Mission</h2>
+                    <p>To democratize website design by providing entrepreneurs and non-designers with powerful tools that instantly capture design inspiration from any source and transform it into customizable website frameworks.</p>
+                    <p>We believe that everyone deserves access to professional-quality design tools, regardless of their technical background or resources. Our goal is to bridge the gap between vision and implementation, making the web design process faster, more intuitive, and more accessible.</p>
+                </div>
+                <div class="vision-card">
+                    <h2>Our Vision</h2>
+                    <p>We envision a world where anyone with a business idea can quickly create a professional online presence without the barriers of technical complexity or prohibitive costs.</p>
+                    <p>By putting powerful design capabilities in the hands of entrepreneurs and small teams, we aim to foster innovation, help new businesses succeed, and make the web a more diverse and creative space filled with unique voices and visions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <p class="section-subtitle">The passionate people behind IdeaVisor, committed to making website design easier for everyone</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="75" cy="75" r="75" fill="#E9ECEF"/>
+                            <circle cx="75" cy="60" r="25" fill="#ADB5BD"/>
+                            <path d="M35 120C35 103.431 53.2076 90 75 90C96.7924 90 115 103.431 115 120V120H35V120Z" fill="#ADB5BD"/>
+                        </svg>
+                    </div>
+                    <div class="member-info">
+                        <h3>Alex Chen</h3>
+                        <span class="member-position">Founder & CEO</span>
+                        <p>With over 15 years of experience in web development and design, Alex founded IdeaVisor to solve the common frustrations he witnessed entrepreneurs facing when trying to create their first websites.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="75" cy="75" r="75" fill="#E9ECEF"/>
+                            <circle cx="75" cy="60" r="25" fill="#ADB5BD"/>
+                            <path d="M35 120C35 103.431 53.2076 90 75 90C96.7924 90 115 103.431 115 120V120H35V120Z" fill="#ADB5BD"/>
+                        </svg>
+                    </div>
+                    <div class="member-info">
+                        <h3>Maya Rodriguez</h3>
+                        <span class="member-position">Chief Design Officer</span>
+                        <p>Former design lead at a major tech company, Maya brings her expertise in UX/UI design to ensure IdeaVisor delivers beautiful, functional, and user-friendly design outputs.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="75" cy="75" r="75" fill="#E9ECEF"/>
+                            <circle cx="75" cy="60" r="25" fill="#ADB5BD"/>
+                            <path d="M35 120C35 103.431 53.2076 90 75 90C96.7924 90 115 103.431 115 120V120H35V120Z" fill="#ADB5BD"/>
+                        </svg>
+                    </div>
+                    <div class="member-info">
+                        <h3>David Kumar</h3>
+                        <span class="member-position">CTO</span>
+                        <p>An AI and machine learning expert, David leads our engineering team in developing the sophisticated algorithms that power IdeaVisor's style extraction and blueprint generation capabilities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-i18n="cta.title">Join Us on Our Mission</h2>
+                <p data-i18n="cta.subtitle">Sign up for IdeaVisor today and be part of the design revolution</p>
+                <div class="cta-form">
+                    <input type="email" placeholder="Enter your email address" data-i18n-placeholder="cta.email_placeholder">
+                    <button class="btn btn-primary btn-lg" data-i18n="cta.start_btn">Get Started</button>
+                </div>
+                <p class="cta-note" data-i18n="cta.note">No credit card required. Try before you pay.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.5 8L42 32H5L23.5 8Z" fill="#4361EE"/>
+                            <path d="M23.5 20L32 32H15L23.5 20Z" fill="#3A0CA3" fill-opacity="0.7"/>
+                            <text x="50" y="25" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#fff">IdeaVisor</text>
+                        </svg>
+                    </div>
+                    <p class="footer-description" data-i18n="footer.description">IdeaVisor helps entrepreneurs easily build website design prototypes, quickly showcase design concepts, and accelerate digital product development.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 data-i18n="footer.product">Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#features" data-i18n="footer.features">Features</a></li>
+                        <li><a href="index.html#demo" data-i18n="footer.demo">Demo</a></li>
+                        <li><a href="pricing.html" data-i18n="footer.pricing">Pricing</a></li>
+                        <li><a href="#" data-i18n="footer.roadmap">Roadmap</a></li>
+                        <li><a href="#" data-i18n="footer.changelog">Changelog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 data-i18n="footer.resources">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" data-i18n="footer.blog">Blog</a></li>
+                        <li><a href="#" data-i18n="footer.tutorials">Tutorials</a></li>
+                        <li><a href="index.html#gallery" data-i18n="footer.examples">Examples</a></li>
+                        <li><a href="#" data-i18n="footer.documentation">Documentation</a></li>
+                        <li><a href="#" data-i18n="footer.api">API</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 data-i18n="footer.company">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-i18n="footer.about">About</a></li>
+                        <li><a href="#" data-i18n="footer.careers">Careers</a></li>
+                        <li><a href="#" data-i18n="footer.contact">Contact</a></li>
+                        <li><a href="#" data-i18n="footer.press">Press</a></li>
+                        <li><a href="#" data-i18n="footer.partners">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 data-i18n="footer.legal">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" data-i18n="footer.terms">Terms</a></li>
+                        <li><a href="#" data-i18n="footer.privacy">Privacy</a></li>
+                        <li><a href="#" data-i18n="footer.cookies">Cookies</a></li>
+                        <li><a href="#" data-i18n="footer.security">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p data-i18n="footer.copyright">&copy; 2023 IdeaVisor. All rights reserved.</p>
+                </div>
+                <div class="language-selector">
+                    <label for="language-select" data-i18n="footer.language">Language:</label>
+                    <select id="language-select">
+                        <option value="en-US">English</option>
+                        <option value="zh-CN">简体中文</option>
+                        <option value="ja-JP">日本語</option>
+                        <option value="ko-KR">한국어</option>
+                        <option value="fr-FR">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

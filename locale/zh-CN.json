@@ -1,0 +1,183 @@
+{
+  "nav": {
+    "home": "首页",
+    "features": "功能",
+    "demo": "体验",
+    "gallery": "案例",
+    "comparison": "对比",
+    "pricing": "价格",
+    "login": "登录",
+    "register": "注册"
+  },
+  "hero": {
+    "title": "输入一个网址，构建您的网站设计原型",
+    "subtitle": "IdeaVisor 帮助创业者快速获取设计灵感，只需提供一个参考网站，即刻获得可定制的网站框架和视觉风格。",
+    "cta_primary": "立即体验",
+    "cta_secondary": "了解更多",
+    "stat1": "满意用户",
+    "stat2": "生成原型",
+    "stat3": "用户评分"
+  },
+  "trust": {
+    "title": "受到行业信赖"
+  },
+  "features": {
+    "title": "IdeaVisor 如何助力您的设计流程",
+    "subtitle": "将模糊的想法转化为清晰的设计原型，节省宝贵的时间和资源",
+    "feature1_title": "智能风格提取",
+    "feature1_desc": "自动分析并提取目标网站的色彩方案、排版规则、布局结构和界面组件样式，让您快速掌握设计精髓。",
+    "feature2_title": "可下载设计资源",
+    "feature2_desc": "获取完整的HTML、CSS和JavaScript文件包，包括响应式设计的页面模板和组件，随时可用于您的项目开发。",
+    "feature3_title": "直观内容编辑器",
+    "feature3_desc": "使用我们的可视化编辑环境，直接修改文本、替换图片、调整颜色，无需编码知识即可个性化您的设计原型。",
+    "feature4_title": "组件库与模块",
+    "feature4_desc": "访问从目标网站提取灵感的UI元素和内容模块，拖放式构建定制页面，保持视觉风格的一致性。",
+    "feature5_title": "实时预览与分享",
+    "feature5_desc": "即时查看您的设计变更，并生成可分享的链接，便于与团队成员或客户协作沟通设计方案。",
+    "feature6_title": "免注册体验区",
+    "feature6_desc": "无需注册即可尝试核心功能，快速体验IdeaVisor的强大能力，满意后再创建账户获取更多特权。"
+  },
+  "workflow": {
+    "title": "只需三步，从构想到原型",
+    "subtitle": "简单直观的流程，让您专注于创意而非技术细节",
+    "step1_title": "输入参考网址",
+    "step1_desc": "提供一个您喜欢的网站链接，IdeaVisor将开始分析其视觉风格与结构特征。",
+    "step2_title": "等待智能分析",
+    "step2_desc": "我们的系统将快速提取色彩方案、字体样式、页面结构和组件设计，通常只需几秒钟。",
+    "step3_title": "自定义并下载",
+    "step3_desc": "根据您的需求调整生成的设计原型，添加您的内容，然后下载完整的网站文件包。"
+  },
+  "playground": {
+    "title": "立即体验IdeaVisor",
+    "subtitle": "无需注册，输入一个网址，即刻感受设计原型的生成过程",
+    "tab_demo": "快速体验",
+    "tab_result": "结果预览",
+    "url_label": "输入您喜欢的网站链接：",
+    "url_placeholder": "https://example.com",
+    "url_hint": "提示：尝试输入任何设计精美的网站，我们将提取其视觉风格",
+    "analyze_btn": "分析网站",
+    "loading": "正在分析网站结构与视觉风格，请稍候...",
+    "examples_title": "或者尝试这些示例：",
+    "result_empty": "请先分析一个网站以查看结果",
+    "colors_title": "提取的色彩方案",
+    "typography_title": "字体与排版",
+    "layout_title": "页面布局结构",
+    "components_title": "界面组件样式",
+    "download_prompt": "想下载完整的设计原型包？",
+    "register_btn": "注册免费账户"
+  },
+  "comparison": {
+    "title": "IdeaVisor vs. 其他设计工具",
+    "subtitle": "了解IdeaVisor如何为您的设计流程带来更多价值"
+  },
+  "pain_points": {
+    "title": "解决设计流程中的常见痛点",
+    "subtitle": "我们理解创业者在网站设计过程中面临的挑战，IdeaVisor提供了有效解决方案",
+    "pain1_title": "设计技能不足",
+    "pain1_desc": "大多数创业者缺乏专业设计技能，无法有效传达他们的网站愿景，导致设计沟通困难。",
+    "pain2_title": "时间与资源限制",
+    "pain2_desc": "创业初期时间和资金紧张，无法承担高昂的设计服务费用或投入大量时间学习设计技能。",
+    "pain3_title": "沟通与反馈障碍",
+    "pain3_desc": "创业者难以向设计师或开发团队准确传达他们的设计期望，导致频繁修改和沟通成本增加。",
+    "pain4_title": "设计灵感匮乏",
+    "pain4_desc": "在项目初期，创业者往往难以确定理想的设计方向，缺乏有效的灵感来源和参考标准。",
+    "solution": "IdeaVisor解决方案：",
+    "solution1": "通过从现有网站提取设计风格，让非设计师也能创建专业水准的设计原型，无需学习复杂的设计工具。",
+    "solution2": "在几秒钟内生成网站设计原型，大幅缩短设计流程，让您能够将宝贵的时间和资源投入到核心业务发展。",
+    "solution3": "提供可视化的设计原型和分享功能，让您能够清晰地展示设计方向，促进团队理解和高效沟通。",
+    "solution4": "通过分析和提取现有网站的设计元素，提供丰富的案例展示区，帮助您发现和确定最适合的设计风格。",
+    "cta": "立即解决您的设计挑战"
+  },
+  "ai_generator": {
+    "hero": {
+      "title": "AI 驱动的设计灵感",
+      "subtitle": "使用我们先进的AI图像生成器创建独特的视觉效果，激发您的网站设计灵感。描述您的愿景，让IdeaVisor的AI将其变为现实。"
+    },
+    "form": {
+      "describe_title": "描述您的愿景",
+      "description_label": "输入您想要生成的图像的详细描述：",
+      "description_placeholder": "例如，一个现代简约的科技创业公司网站首页，采用蓝白配色方案，具有抽象几何形状和简洁的排版。",
+      "style_label": "风格：",
+      "style_realistic": "写实风格",
+      "style_abstract": "抽象风格",
+      "style_minimalist": "极简风格",
+      "style_futuristic": "未来风格",
+      "style_retro": "复古风格",
+      "aspect_ratio_label": "宽高比：",
+      "ratio_square": "1:1 (正方形)",
+      "ratio_landscape": "16:9 (横向)",
+      "ratio_portrait": "9:16 (纵向)",
+      "ratio_standard": "4:3 (标准)",
+      "ratio_ultrawide": "21:9 (超宽)",
+      "seed_label": "种子值 (可选)：",
+      "seed_placeholder": "用于可复现性的随机种子",
+      "generate_button": "生成图像"
+    },
+    "result": {
+      "title": "生成结果",
+      "loading": "正在生成您的设计灵感...",
+      "empty_state": "您生成的图像将显示在这里",
+      "download_button": "下载",
+      "save_button": "保存到画廊",
+      "share_button": "分享"
+    },
+    "gallery": {
+      "title": "社区画廊",
+      "item1_prompt": "带有渐变背景和悬浮元素的现代网站设计",
+      "item1_author": "作者: johndoe",
+      "item1_time": "2天前",
+      "item2_prompt": "带有产品卡片和简约导航的电商网格布局",
+      "item2_author": "作者: designpro",
+      "item2_time": "4天前",
+      "item3_prompt": "带有霓虹色调和数据可视化的暗黑模式仪表盘",
+      "item3_author": "作者: uimaster",
+      "item3_time": "1周前",
+      "item4_prompt": "具有大型排版和留白的极简博客布局",
+      "item4_author": "作者: creative92",
+      "item4_time": "1周前",
+      "item5_prompt": "带有设备模型和功能亮点的应用登陆页",
+      "item5_author": "作者: appdevguru",
+      "item5_time": "2周前",
+      "item6_prompt": "带有砖石网格和细微动画的创意作品集布局",
+      "item6_author": "作者: designerx",
+      "item6_time": "2周前"
+    },
+    "cta": {
+      "title": "准备创建您的网站设计了吗？",
+      "subtitle": "使用这些AI生成的设计灵感作为您下一个IdeaVisor项目的起点"
+    }
+  },
+  "footer": {
+    "description": "IdeaVisor让创业者轻松构建网站设计原型，快速展现设计构想，加速数字产品开发。",
+    "copyright": " 2023 IdeaVisor. 保留所有权利。",
+    "language": "语言：",
+    "product": "产品",
+    "features": "功能",
+    "demo": "立即体验",
+    "pricing": "价格",
+    "ai_generator": "AI生成器",
+    "roadmap": "产品路线图",
+    "resources": "资源",
+    "blog": "博客",
+    "tutorials": "教程",
+    "examples": "案例展示",
+    "documentation": "文档",
+    "api": "API",
+    "company": "公司",
+    "about": "关于我们",
+    "careers": "招贤纳士",
+    "contact": "联系我们",
+    "press": "媒体报道",
+    "partners": "合作伙伴",
+    "legal": "法律",
+    "terms": "服务条款",
+    "privacy": "隐私政策",
+    "cookies": "Cookie政策",
+    "security": "安全说明"
+  },
+  "cta": {
+    "email_placeholder": "输入您的邮箱地址",
+    "start_btn": "立即开始",
+    "note": "无需信用卡，先体验后付费。"
+  }
+}
